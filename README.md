@@ -6,6 +6,7 @@ This is the course homepage for Math 241 at Queens College, City University of N
 
 My lecture videos can be watched on slack and lecture notes are also scanned in as PDF files contributed by myself.
 
+* Lecture 5 (video on slack) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/lectures/lec05kap.pdf)
 * Lecture 4 (video on slack) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/lectures/lec04kap.pdf)
 * Lecture 3 (video on slack) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/lectures/lec03kap.pdf)
 * Lecture 2 (video on slack) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/lectures/lec02kap.pdf)
@@ -31,7 +32,7 @@ Final material [(A)](https://github.com/kapelner/QC_Math_241_Fall_2017/blob/mast
 * Homework 5 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/homeworks/hw05/hw05.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/homeworks/hw05/hw05.pdf) (due 11/20)
 * Homework 4 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/homeworks/hw04/hw04.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/homeworks/hw04/hw04.pdf) (due 11/1)
 * Homework 3 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/homeworks/hw03/hw03.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/homeworks/hw03/hw03.pdf) (due 10/16)-->
-* INCOMPLETE Homework 2 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/homeworks/hw02/hw02.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/homeworks/hw02/hw02.pdf) (due 9/??)
+* Homework 2 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/homeworks/hw02/hw02.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/homeworks/hw02/hw02.pdf) (due 10/2)
 * Homework 1 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/homeworks/hw01/hw01.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/homeworks/hw01/hw01.pdf) (due 9/5)
 
 

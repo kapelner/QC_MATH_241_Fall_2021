@@ -6,6 +6,7 @@ This is the course homepage for Math 241 at Queens College, City University of N
 
 My lecture videos can be watched on slack and lecture notes are also scanned in as PDF files contributed by myself.
 
+* Lecture 6 (video on slack) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/lectures/lec06kap.pdf)
 * Lecture 5 (video on slack) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/lectures/lec05kap.pdf)
 * Lecture 4 (video on slack) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/lectures/lec04kap.pdf)
 * Lecture 3 (video on slack) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/lectures/lec03kap.pdf)

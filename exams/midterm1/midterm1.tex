@@ -1,0 +1,219 @@
+%\documentclass[12pt]{article}
+\documentclass[12pt,landscape]{article}
+
+\include{preamble}
+
+\newcommand{\instr}{\small Your answer will consist of a lowercase string (e.g. \texttt{aebgd}) where the order of the letters does not matter. \normalsize}
+
+\title{Math 241 Fall \the\year{} \\ Midterm Examination One}
+\author{Professor Adam Kapelner}
+
+\date{Thursday, October 7, \the\year{}}
+
+\begin{document}
+\maketitle
+
+%\noindent Full Name \line(1,0){410}
+
+\thispagestyle{empty}
+
+\section*{Code of Academic Integrity}
+
+\footnotesize
+Since the college is an academic community, its fundamental purpose is the pursuit of knowledge. Essential to the success of this educational mission is a commitment to the principles of academic integrity. Every member of the college community is responsible for upholding the highest standards of honesty at all times. Students, as members of the community, are also responsible for adhering to the principles and spirit of the following Code of Academic Integrity.
+
+Activities that have the effect or intention of interfering with education, pursuit of knowledge, or fair evaluation of a student's performance are prohibited. Examples of such activities include but are not limited to the following definitions:
+
+\paragraph{Cheating} Using or attempting to use unauthorized assistance, material, or study aids in examinations or other academic work or preventing, or attempting to prevent, another from using authorized assistance, material, or study aids. Example: using an unauthorized cheat sheet in a quiz or exam, altering a graded exam and resubmitting it for a better grade, etc.
+\\
+
+\noindent By taking this exam, you acknowledge and agree to uphold this Code of Academic Integrity. \\
+
+%\begin{center}
+%\line(1,0){250} ~~~ \line(1,0){100}\\
+%~~~~~~~~~~~~~~~~~~~~~signature~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ date
+%\end{center}
+
+\normalsize
+
+\section*{Instructions}
+This exam is 70 minutes (variable time per question) and closed-book. You are allowed \textbf{one} page (front and back) of a \qu{cheat sheet}, blank scrap paper and a graphing calculator. Please read the questions carefully. Within each problem, I recommend considering the questions that are easy first and then circling back to evaluate the harder ones. No food is allowed, only drinks. %If the question reads \qu{compute,} this means the solution will be a number otherwise you can leave the answer in \textit{any} widely accepted mathematical notation which could be resolved to an exact or approximate number with the use of a computer. I advise you to skip problems marked \qu{[Extra Credit]} until you have finished the other questions on the exam, then loop back and plug in all the holes. I also advise you to use pencil. The exam is 100 points total plus extra credit. Partial credit will be granted for incomplete answers on most of the questions. \fbox{Box} in your final answers. Good luck!
+
+\pagebreak
+
+
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{10} These questions are about the philosophy of probability and the mathematization of probability.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{15} 
+\begin{enumerate}[(a)]
+\item The theory of probability is as old as geometry, dating back to the ancient Greeks.
+\item Notions of equally likely outcomes, conditional probability and independence began around the 1600's.
+
+\item Some famous people are saying the probability the stock market will crash this month is high; they are employing a subjective defintion of probability.
+\item The long run frequency definition of probability can help us find the value of the probability the stock market will crash this month.
+\item Karl Poppoer's propensity definition of probability can help us find the value of the probability the stock market will crash this month.
+\item Chevalier de Mere likely employed the long run frequency definition of probability to conjecture that the chance of getting one or more double six in 24 rolls of a pair of dice is less than a half.
+\item The problem with the long run frequency definition is that we cannot actually observe infinite experiments even if events were repeatable.
+
+\item According to Laplace, randomness is an illusion due to our own ignorance.
+\item The development of the physical theory of quantum mechanics seems to indicate the world is not deterministic (at least when talking about very small objects like electrons).
+
+
+\item The definition $\prob{A} = |A| / |\Omega|$ is always valid.
+\item The definition $\prob{A} = |A| / |\Omega|$ is an \qu{objective} definition of probability.
+\item $\prob{A \cup B} = \prob{A} + \prob{B}$ if $A,B$ are disjoint is one of Kolmogorov's axiom properties of the $\prob{}$ function.
+\item $\prob{A} = 1 - \prob{A^C}$ is one of Kolmogorov's axiom properties of the $\prob{}$ function.
+\item Kolmogorov's definitions have been proven absolutely true.
+\item Kolmogorov's definitions solved the philosophical problem of defining probability in the physical world.
+\end{enumerate}
+\eenum\instr\pagebreak
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{12} We flip a coin three times. The first flip yields either $H_1$ or $T_1$. The second flip yields either $H_2$ or $T_2$. The third flip yields either $H_3$ or $T_3$. Let $\Omega$ be the universe of outcomes for all three flips.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{19} 
+\begin{enumerate}[(a)]
+\item The total number of unique outcomes is 3
+\item The total number of unique outcomes is $2 \times 3$
+\item The total number of unique outcomes is $2^3$
+\item The total number of unique outcomes is $2^{2^3}$
+\item The total number of \qu{events} are the total number of probability questions one can ask
+\item The total number of probability questions one can ask is 3
+\item The total number of probability questions one can ask is $2 \times 3$
+\item The total number of probability questions one can ask is $2^3$
+\item The total number of probability questions one can ask is $2^{2^3}$
+\item $\prob{H_3} = 1/2$
+\item $\prob{H_3} = 1/8$
+\item $\prob{H_1, H_2, H_3} = 1/8$
+\item $\prob{H_1, T_2, H_3} = 1/8$
+\item $\prob{\text{2 heads and 1 tail in that order}} = 1/8$
+\item $\prob{\text{2 heads and 1 tail in any order}} = 1/8$
+\item $\prob{\text{2 heads and 1 tail in any order}} = \binom{3}{2}/2^3$
+\item $\prob{\text{2 heads and 1 tail in any order}} = \binom{3}{1}/2^3$
+\item $\prob{\text{2 heads and 0 tail in any order}} = \binom{3}{2}\binom{3}{0}/2^3$
+\item $\prob{\text{1 head and 1 tail in any order in \emph{only} two flips}} = 1/2$
+\end{enumerate}
+\eenum\instr\pagebreak
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{12} 10 people go to a party. Five are men: James, Robert, Michael, William, David (J, R, M, W, D) and five are women: Patricia, Linda, Elizabeth, Barbara, Susan (P, L, E, B, S).
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{13} 
+\begin{enumerate}[(a)]
+\item If there are 10 chairs, there are 10 unique orderings in which the 10 people could be seated.
+\item If there are 10 chairs, there are 10! unique orderings in which the 10 people could be seated.
+\item If there are 10 chairs, there are $_{10} P_{10}$ unique orderings in which the 10 people could be seated.
+\item If there are 10 chairs, there are $\binom{10}{10}$ unique orderings in which the 10 people could be seated.
+
+\item If there are 6 chairs, there are 6 unique orderings in which the 10 people could be seated.
+\item If there are 6 chairs, there are 6! unique orderings in which the 10 people could be seated.
+\item If there are 6 chairs, there are $_{10} P_{6}$ unique orderings in which the 10 people could be seated.
+\item If there are 6 chairs, there are $\binom{10}{6}$ unique orderings in which the 10 people could be seated.
+
+\item If 4 people are chosen at random, the probability they are all men is 4/10.
+\item If 4 people are chosen at random, the probability they are all men is $_{10} P_{4}$ / $_{10} P_{10}$.
+\item If 4 people are chosen at random, the probability they are all men is 5 / $\binom{10}{4}$.
+\item If 4 people are chosen at random, the probability they are all men is $\binom{5}{4}$ / $\binom{10}{4}$.
+\item If 4 people are chosen at random, the probability they are all men is $\binom{5}{4}$ / $\binom{10}{6}$.
+\end{enumerate}
+\eenum\instr\pagebreak
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{9} Let $n \in \naturals$ and $k \in \braces{0, 1, \ldots, n}$. Let $a, b \in \reals$.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{10} 
+\begin{enumerate}[(a)]
+\item $(a + b)^n = \binom{n}{0} a^0 b^n + \binom{n}{1} a^1 b^{n-1} + \binom{n}{2} a^2 b^{n-2} + \ldots + \binom{n}{n} a^n b^0$
+
+\item $(y+1)^5 = 1 + 5y + 10y^2 + 10y^3 + 5y^4 + y^5$
+\item $(y+1)^5 = \sum_{i=1}^5 \binom{5}{i} y^i$
+
+\item When expanding $(a + b)^4$, there will be 4 terms after combining like terms
+\item When expanding $(a + b)^4$, there will be 5 terms after combining like terms
+\item When expanding $(a + b)^4$, there will be 16 terms after combining like terms
+\item When expanding $(a + b)^4$, there will be a term $2a^2 b^2$ after combining like terms
+
+\item $\binom{n}{0} + \binom{n}{1} + \binom{n}{2} + \ldots + \binom{n}{n} = n!$
+\item $\binom{n}{0} + \binom{n}{1} + \binom{n}{2} + \ldots + \binom{n}{n} = n^2$
+
+\item The generation of Pascal's triangle reveals a cominatorial identity
+\end{enumerate}
+\eenum\instr\pagebreak
+
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{13} Let $A$ and $B$ be sets and $\Omega$ be the universe where $\abss{\Omega}> 0$ and finite.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{26} 
+\begin{multicols}{2}
+\begin{enumerate}[(a)]
+\item $A \subseteq \Omega$
+\item $A \subset \Omega$
+\item $A = \braces{x : x \in \Omega}$
+\item $|A| \leq |\Omega|$
+\item $2^A \in \Omega$
+\item $2^A \subseteq \Omega$
+\item $A \times A \subseteq \Omega$
+\item $A \cup B \subseteq \Omega$
+\item $A \cup \varnothing = \Omega$
+\item $A \cap \varnothing = \Omega$
+\item $A \cup B \subseteq \Omega$
+\item $\varnothing \neq \Omega$
+\item $\Omega \cup \varnothing = \Omega$
+\item $|A \cup B| = |A| + |B|$ if $A$ and $B$ are mutually exclusive
+\item $|A \cup B| = |A| + |B|$ if $A$ and $B$ are collectively exhaustive
+\item $A \cup B^C = \Omega$
+\item $B \cup B^C = \Omega$
+\item $A \cap B^C = \varnothing$
+\item $B \cap B^C = \varnothing$
+\item $A \backslash B = (A \backslash B) \backslash B$ 
+\item $A \backslash B = A \backslash (B \backslash B)$ 
+\item $\braces{2x : x \in \integers} = \braces{\ldots, -6, -4, -2, 0, 2, 4, 6, \ldots}$
+\item $\naturals \backslash \integers = \braces{\ldots, -2, -1, 0}$
+\item $\reals \backslash \integers = \varnothing$
+\item $\reals \cap \integers = \integers$
+\item $\braces{2x : x \in \reals} = \reals$
+\end{enumerate}
+\end{multicols}
+\eenum\instr\pagebreak
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{14} In basketball there are three positions: guard, forward and center. Some players can play more than one position well. We are assuming for this problem that each player only can play one position. In the NY Knicks there are 19 players where 9 are guards, 3 are centers and 7 are forwards. 
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{13} 
+\begin{enumerate}[(a)]
+\item The probability of a randomly sampled player on the NY Knicks being a center is 3/19.
+\item The probability of two randomly sampled players on the NY Knicks being centers is 3/19 $\times$ 2/18.
+\item The probability of two randomly sampled players on the NY Knicks being centers is $_3 P_2 / _{19} P_2$.
+\item The probability of two randomly sampled players on the NY Knicks being centers is $\binom{3}{2} / \binom{19}{2}$.
+
+\item The probability of sampling 7 players and all 7 being centers is 0.
+\item The probability of sampling 7 players and all 7 being forwards is 1.
+\item The probability of sampling 7 players and all 7 being forwards is 0.
+\item The number of ways of sampling 4 players and getting two pairs of types of positions players is $\binom{9}{2} \binom{3}{2} + \binom{9}{2} \binom{7}{2} + \binom{3}{2} \binom{7}{2}$ where order doesn't matter.
+\item The number of ways of sampling 4 players and getting two pairs of types of positions players is $\binom{3}{2}$ where order doesn't matter.
+\item The number of ways of sampling 4 players and getting two pairs of types of positions players is $\binom{4}{2}$ where order doesn't matter.
+
+\item The number of ways of choosing five players without replacement where order doesn't matter $\binom{19}{5}$.\\
+
+Assume that during gameplay, only five players are on the court for each time: the 2-1-2 lineup which is 2 guards, 1 center and 2 forwards. These five players are called the \qu{team} and the order of the players in the team does not matter.
+
+
+
+
+\item The probability of five randomly sampled players on the NY Knicks forming a team is $\binom{9}{2} \binom{3}{1} \binom{7}{2} / \binom{19}{5}$.
+
+\item The probability of five randomly sampled players being 2 guards, 1 center and 2 forwards \emph{in that order} is $\binom{9}{2} \binom{3}{1} \binom{7}{2} / \binom{19}{5}$.
+
+\end{enumerate}
+\eenum\instr\pagebreak
+
+
+
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

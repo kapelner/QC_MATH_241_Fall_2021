@@ -41,7 +41,7 @@ Final material [(A)](https://github.com/kapelner/QC_Math_241_Fall_2017/blob/mast
 
 ## Exams
 
-* Midterm I, October 7 (on zoom during regular class time) 
+* Midterm I, October 7 (on zoom during regular class time) [(exam)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/exams/midterm1/midterm1.pdf) [(solutions)](https://github.com/kapelner/QC_Math_241_Fall_2021/blob/master/exams/midterm1/midterm1_solutions.pdf)
 * Midterm II, November 11 (on zoom during regular class time) 
 * Final, December TBA (on zoom) 
 

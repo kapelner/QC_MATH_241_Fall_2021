@@ -1,0 +1,226 @@
+%\documentclass[12pt]{article}
+\documentclass[12pt,landscape]{article}
+
+\usepackage{wrapfig}
+\include{preamble}
+
+\newcommand{\instr}{\small Your answer will consist of a lowercase string (e.g. \texttt{aebgd}) where the order of the letters does not matter. \normalsize}
+
+\title{Math 241 Fall \the\year{} \\ Midterm Examination Two}
+\author{Professor Adam Kapelner}
+
+\date{Thursday, November 11, \the\year{}}
+
+\begin{document}
+\maketitle
+
+%\noindent Full Name \line(1,0){410}
+
+\thispagestyle{empty}
+
+\section*{Code of Academic Integrity}
+
+\footnotesize
+Since the college is an academic community, its fundamental purpose is the pursuit of knowledge. Essential to the success of this educational mission is a commitment to the principles of academic integrity. Every member of the college community is responsible for upholding the highest standards of honesty at all times. Students, as members of the community, are also responsible for adhering to the principles and spirit of the following Code of Academic Integrity.
+
+Activities that have the effect or intention of interfering with education, pursuit of knowledge, or fair evaluation of a student's performance are prohibited. Examples of such activities include but are not limited to the following definitions:
+
+\paragraph{Cheating} Using or attempting to use unauthorized assistance, material, or study aids in examinations or other academic work or preventing, or attempting to prevent, another from using authorized assistance, material, or study aids. Example: using an unauthorized cheat sheet in a quiz or exam, altering a graded exam and resubmitting it for a better grade, etc.
+\\
+
+\noindent By taking this exam, you acknowledge and agree to uphold this Code of Academic Integrity. \\
+
+%\begin{center}
+%\line(1,0){250} ~~~ \line(1,0){100}\\
+%~~~~~~~~~~~~~~~~~~~~~signature~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ date
+%\end{center}
+
+\normalsize
+
+\section*{Instructions}
+This exam is 70 minutes (variable time per question) and closed-book. You are allowed \textbf{one} page (front and back) of a \qu{cheat sheet}, blank scrap paper and a graphing calculator. Please read the questions carefully. Within each problem, I recommend considering the questions that are easy first and then circling back to evaluate the harder ones. No food is allowed, only drinks. %If the question reads \qu{compute,} this means the solution will be a number otherwise you can leave the answer in \textit{any} widely accepted mathematical notation which could be resolved to an exact or approximate number with the use of a computer. I advise you to skip problems marked \qu{[Extra Credit]} until you have finished the other questions on the exam, then loop back and plug in all the holes. I also advise you to use pencil. The exam is 100 points total plus extra credit. Partial credit will be granted for incomplete answers on most of the questions. \fbox{Box} in your final answers. Good luck!
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{12} Consider an apartment building with three floors. Each apartment has a floor number and an apartment letter. The first floor has 5 apartments denoted 1A, 1B, 1C, 1D, 1E; the second floor has 3 apartments denoted 2A, 2B, 2C; the third floor has only a penthouse denoted 3A. Bob walks into this apartment building and selects a floor uniformly (i.e. each floor is equally likely). He then enters an apartment on that floor uniformly.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{15} 
+\begin{enumerate}[(a)]
+\item The probability Bob picks floor 3 is less than the probability Bob picks floor 1.
+\item The probability Bob picks floor 3 is more than the probability Bob picks floor 1.
+\item The probability of selecting each apartment in the entire building is uniform.
+\item The probability of selecting each apartment on floor 2 is uniform if you are told Bob is on floor 2.
+\item The probability Bob enters the penthouse is 1/3.
+\item The probability Bob enters a C apartment is 2/3.
+\item Given that Bob is in a C apartment, the probability he is on the first floor is zero.
+\item Given that Bob is in a C apartment, the probability he is on the first floor is 1/3.
+\item Given that Bob is in a C apartment, the probability he is on the first floor is 9/24.
+\item Given that Bob is in a C apartment, the probability he is on the first floor is 15/24.
+\item Given that Bob is in a C apartment, the probability he is on the third floor is zero.
+\item Given that Bob is in a C apartment, the probability he is on the third floor is 1/3.
+\item Given that Bob is in a C apartment, the probability he is on the third floor is 9/24.
+\item Given that Bob is in a C apartment, the probability he is on the third floor is 15/24.
+\item The floor selection is independent of the apartment letter selection
+\end{enumerate}
+\eenum\instr\pagebreak
+
+%%%%%%%%%%%%%%%%%%
+\vspace{-0.4cm}
+\begin{wrapfigure}{R}{2in}
+\includegraphics[width=1.5in]{spinner.png}
+\end{wrapfigure} \problem\timedsection{12}  Consider a game where someone spins the spinner pictured on the right. The numbers represent payouts in \$. The spinner has four colors: red, blue, green, yellow with payouts 2,4, or 8; 5 or 7; 3 or 6; 1 respectively. Let $X$ be the rv whose realization values are the payouts. Assume the spinner is fair.
+
+\benum\truefalsesubquestionwithpoints{18} 
+\begin{enumerate}[(a)]
+
+\vspace{-0.2cm}
+\item $X$ is a discrete rv
+\item $X$ is a uniform discrete rv
+\item $X$ could be a binomial rv where $n = 8$
+\item $X$ could be a hypergeometric rv where $N = 8$
+\item $\support{X} = \braces{1, 2,..., 8}$
+\item $\support{X} = \bracks{1, 8}$
+%\item $|\support{X}| = 8$
+\item $|\support{X}| = |\naturals|$
+\item If we let $\Omega$ = \{Red, blue, green, yellow\} then we can construct a rv $X$ that maps $\omega \in \Omega$ to the support values of $X$.
+\item If we let $\Omega = \bracks{0, 2\pi}$ where $\omega$ represents the angle of the spinner from the right horizontal level between states 2 and 3, then we can construct a rv $X$ that maps $\omega \in \Omega$ to the support values of $X$.
+\item $\expe{X} = 4$
+\item $\expe{X} = 4.5$
+\item $\expe{X} = 5$
+\item Med$\bracks{X}$ = 4
+\item Med$\bracks{X}$ = 4.5
+\item Med$\bracks{X}$ = 5
+\item Q$\bracks{X, 0.1}$ = 1
+\item Q$\bracks{X, 0.1}$ = 2
+\item Range$\bracks{X}$ = 8
+\end{enumerate}
+\eenum\instr\pagebreak
+
+%%%%%%%%%%%%%%%%%%
+\begin{wrapfigure}{R}{2in}
+\includegraphics[width=1.5in]{spinner.png}
+\end{wrapfigure} \problem\timedsection{8} \ingray{Consider a game where someone spins the spinner pictured on the right. The numbers represent payouts in dollars. The spinner has four colors: red, blue, green, yellow. Red payouts are 2,4, or 8; blue payouts are 5 or 7; green payouts are 3 or 6; yellow only pays out 1. Let $X$ be the rv whose realization values are the payouts. Assume the spinner is fair.} In this rv, $\mu = 4.5$ and $\support{X} = \braces{1, 2,..., 8}$.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{14} 
+\begin{enumerate}[(a)]
+\item $p(x)$ is monotonically increasing
+\item $F(x)$ is monotonically increasing
+\item $p(x) < 1$ for all $x \in \support{X}$
+\item $F(x) < 1$ for all $x \in \support{X}$
+\item $F(4) = 0$
+\item $F(4) = 0.5$
+\item $F(4) = 1$
+\item $p(4) = 0.5$
+\item $\sigsq := \var{X} = (1/8) (1^2 + 2^2 + 3^2 + \ldots + 8^2)$
+\item $\sigsq := \var{X} = (1/4)(0.5^2 + 1.5^2 + 2.5^2 + 3.5^2)$
+\item $\expe{X^2} = 4.5^2$
+\item $\sigma := \sd{X} = \expe{X} - 4.5$
+\item The unit of the value of the variance of $X$ is dollars
+\item The unit of the value of the standard deviation of $X$ is dollars
+\end{enumerate}
+\eenum\instr\pagebreak
+
+%%%%%%%%%%%%%%%%%%
+\begin{wrapfigure}{R}{2in}
+\includegraphics[width=1.3in]{spinner.png}
+\end{wrapfigure} \problem\timedsection{10} \ingray{Consider a game where someone spins the spinner pictured on the right. The numbers represent payouts in dollars. The spinner has four colors: red, blue, green, yellow. Red payouts are 2,4, or 8; blue payouts are 5 or 7; green payouts are 3 or 6; yellow only pays out 1. Let $X$ be the rv whose realization values are the payouts. Assume the spinner is fair. In this rv, $\mu = 4.5$ and $\support{X} = \braces{1, 2,..., 8}$.} The variance is $\sigsq := \var{X} = 5.25$ and $\sigma := \sd{X} = 2.29$ rounded to the nearest two digits.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{13} 
+\begin{enumerate}[(a)]
+\item Another way to define variance (i.e. mean \qu{distance} from the mean) could be $\expe{\abss{X - \mu}}$
+\item Another way to define variance (i.e. mean \qu{distance} from the mean) could be $\expe{X - \mu}$
+\item Another way to define variance (i.e. mean \qu{distance} from the mean) could be $\expe{(X - \mu)^{100}}$
+\item $\expe{X^2} = 5.25 + 4.25^2 = 23.3125$
+\item $\expe{X^2} = 5.25 - 4.25^2 = -12.8125$
+\item $\expe{X^2} = 5.25^2 - 4.25^2 = 9.5$\\
+
+For the rest of these questions let $Y$ denote the rv for the following game. You play the game $X$ but you have to pay a 20\% of the winnings to the casino, then after the tax is taken, you have to pay \$4 to the casino.
+
+\item $X \equalsindist Y$
+\item $X, Y$ are independent rv's
+\item $Y$ is a \qu{fair game} for you (the player)
+\item $\var{Y} = 0.8\sigsq$
+\item $\sd{Y} = 0.8\sigma$
+\item The probability of winning money if you play the game $Y$ is 3/8
+\item $\var{X + Y}$ would have a non-zero covariance term in its expression
+\end{enumerate}
+\eenum\instr\pagebreak
+
+%%%%%%%%%%%%%%%%%%
+\begin{wrapfigure}{R}{2in}
+\includegraphics[width=1.5in]{spinner.png}
+\end{wrapfigure} \problem\timedsection{9} \ingray{Consider a game where someone spins the spinner pictured on the right. The numbers represent payouts in dollars. The spinner has four colors: red, blue, green, yellow. Red payouts are 2,4, or 8; blue payouts are 5 or 7; green payouts are 3 or 6; yellow only pays out 1. Let $X$ be the rv whose realization values are the payouts. Assume the spinner is fair. In this rv, $\mu = 4.5$ and $\support{X} = \braces{1, 2,..., 8}$. The variance is $\sigsq := \var{X} = 5.25$ and $\sigma := \sd{X} = 2.29$ rounded to the nearest two digits.} Also consider playing this game $n = 1000$ times where the spinner is reset to the same position and you flick it with approximately the same force each time. The payouts for these $n$ games are denoted by rv's $\Xoneton$.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{11} 
+\begin{enumerate}[(a)]
+\item $\Xoneton \iid$
+\item $\Xoneton \inddist$
+
+\item The total winnings after all $n$ games is expected to be $4500$
+\item The variance in the total winnings after all $n$ games is 5250
+\item The standard deviation in the total winnings after all $n$ games is 72.46 rounded to the nearest two digits.
+\item The standard deviation in the total winnings after all $n$ games is 2290
+
+\item The average winnings per game after all $n$ games is expected to be $4.5$
+\item The variance in the average winnings per game after all $n$ games is 0.00525
+\item The standard deviation in the average winnings per game after all $n$ games is 0.00229 rounded to the nearest 3 digits.
+\item The standard deviation in the average winnings per game after all $n$ games is 0.0724 rounded to the nearest 3 digits.
+\item As $n$ gets larger, the average winnings per game after all $n$ games approaches a rv centered at $4.5$ with variance shrinking to zero.
+\end{enumerate}
+\eenum\instr\pagebreak
+
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{9} In the previous game, the probability of winning is $p := 3/8$ and you played $n = 1000$ times. Each game was $\iid$. Let $\Xoneton$ now denote whether each game was won or not (1 = win and 0 = lose). These are different rv's than the previous problem! Let $T$ denote the total number of wins out over the $n$ games.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{17} 
+\begin{enumerate}[(a)]
+\item $\Xoneton \iid$
+\item $X_{17} \sim \bernoulli{3/8}$
+\item $X_{17} \sim \bernoulli{5/8}$
+\item $T \sim \binomial{n}{p}$
+\item $T \sim \hypergeom{n}{np}{n}$ 
+\item $T$ is independent of $X_{17}$
+\item $\prob{T = 17} = 3/8$
+\item $\prob{T = 17} = \binom{1000}{17} (3/8)^{17} (5/8)^{983}$
+\item $\prob{X_{17} = 17} = 3/8$
+\item $\prob{X_{17} = 17} = (3/8)^{17}$
+\item $\prob{X_{17} = 17} = \binom{1000}{17} (3/8)^{17} (5/8)^{983}$
+\item $\expe{T} = (3/8)^{17}$
+\item $\expe{T} = 1000 \times 3/8$
+\item $\var{T} = 1000 \times 3/8 \times 5/8$
+\item $\var{T} = \sum_{t=1}^{1000} \binom{1000}{t} (3/8)^{t} (5/8)^{1000 - t}$
+\item $\var{T} = \sum_{t=1}^{1000} t \binom{1000}{t} (3/8)^{t} (5/8)^{1000 - t}$
+\item If you kept playing this game until you won (i.e. no limit on $n$, the number of games), then the number of games total played would be a memoryless rv.
+\end{enumerate}
+\eenum\instr\pagebreak
+
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{10} Consider a cup with $N = 8$ coins inside and $K = 3$ coins are marked with a permanent marker. Let $p := 3/8$ denote the proportion of marked coins of the total number of coins. You shake the cup and then reach in and pull out $n = 6$ coins so 6 are in your hand and 2 are left in the cup. Let $X_1, X_2, \ldots, X_6$ denote the rv that models if each of the 6 coins in your hand are marked or unmarked ($X_i = 1$ if marked and $X_i = 0$ if unmarked). Let $T$ denote the number of coins in your hand that are marked with the permanent marker. Thus, $T$ is the sum of $X_1, X_2, \ldots, X_6$.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{16} 
+\begin{enumerate}[(a)]
+\item $X_1, X_2, \ldots, X_6 \iid$
+\item $X_{3} \equalsindist X_6$
+\item $X_{3} \sim \bernoulli{p}$
+\item $X_{3} \sim \bernoulli{K/N}$
+\item $T \sim \binomial{n}{p}$
+\item $T \sim \binomial{N}{p}$
+\item $T \sim \hypergeom{n}{K}{N}$ 
+\item $T \sim \hypergeom{n}{np}{N}$ 
+\item $T$ is independent of $X_{3}$
+\item $\support{T} = \braces{1, 2, 3, 4, 5, 6, 7, 8}$
+\item $\support{T} = \braces{1, 2, 3, 4, 5, 6}$
+\item $\support{T} = \braces{1, 2, 3}$
+\item $\prob{T = t} = \displaystyle \frac{\binom{3}{t}\binom{5}{6 - t}}{\binom{8}{6}}$
+\item $\expe{T} = np$
+\item $\expe{T} = n\frac{K}{N}$
+\item Given a calculator and enough time, $\var{T}$ can be computed given the information on this page
+\end{enumerate}
+\eenum\instr\pagebreak
+
+\end{document}
+
+

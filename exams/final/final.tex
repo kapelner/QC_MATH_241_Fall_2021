@@ -1,0 +1,524 @@
+%\documentclass[12pt]{article}
+\documentclass[12pt,landscape]{article}
+
+\usepackage{wrapfig}
+\include{preamble}
+
+\newcommand{\instr}{\small Your answer will consist of a lowercase string (e.g. \texttt{aebgd}) where the order of the letters does not matter. \normalsize}
+
+\title{Math 241 Fall \the\year{} \\ Final Examination}
+\author{Professor Adam Kapelner}
+
+\date{Thursday, December 16, \the\year{}}
+
+\begin{document}
+\maketitle
+
+%\noindent Full Name \line(1,0){410}
+
+\thispagestyle{empty}
+
+\section*{Code of Academic Integrity}
+
+\footnotesize
+Since the college is an academic community, its fundamental purpose is the pursuit of knowledge. Essential to the success of this educational mission is a commitment to the principles of academic integrity. Every member of the college community is responsible for upholding the highest standards of honesty at all times. Students, as members of the community, are also responsible for adhering to the principles and spirit of the following Code of Academic Integrity.
+
+Activities that have the effect or intention of interfering with education, pursuit of knowledge, or fair evaluation of a student's performance are prohibited. Examples of such activities include but are not limited to the following definitions:
+
+\paragraph{Cheating} Using or attempting to use unauthorized assistance, material, or study aids in examinations or other academic work or preventing, or attempting to prevent, another from using authorized assistance, material, or study aids. Example: using an unauthorized cheat sheet in a quiz or exam, altering a graded exam and resubmitting it for a better grade, etc.
+\\
+
+\noindent By taking this exam, you acknowledge and agree to uphold this Code of Academic Integrity. \\
+
+%\begin{center}
+%\line(1,0){250} ~~~ \line(1,0){100}\\
+%~~~~~~~~~~~~~~~~~~~~~signature~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ date
+%\end{center}
+
+\normalsize
+
+\section*{Instructions}
+This exam is 110 minutes (variable time per question) and closed-book. You are allowed \textbf{one} page (front and back) of a \qu{cheat sheet}, blank scrap paper and a graphing calculator. Please read the questions carefully. Within each problem, I recommend considering the questions that are easy first and then circling back to evaluate the harder ones. No food is allowed, only drinks. %If the question reads \qu{compute,} this means the solution will be a number otherwise you can leave the answer in \textit{any} widely accepted mathematical notation which could be resolved to an exact or approximate number with the use of a computer. I advise you to skip problems marked \qu{[Extra Credit]} until you have finished the other questions on the exam, then loop back and plug in all the holes. I also advise you to use pencil. The exam is 100 points total plus extra credit. Partial credit will be granted for incomplete answers on most of the questions. \fbox{Box} in your final answers. Good luck!
+
+\pagebreak
+
+
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{12} The NY state lotto consists of the following game: 6 balls are drawn from a vat of 59 balls by a mechanical ball-picking machine where each ball is labeled 1, 2, \ldots, 59. The 6 numbers on the 6 balls are chosen \emph{uniformly} and \emph{without} replacement and these numbers are called the \qu{lotto draw}. Before the balls are selected, you write down 6 unique numbers from the set $\braces{1, 2, \ldots, 59}$ which is your \qu{lottery ticket}. If your numbers are the same as the 6 numbered balls, you win the lotto \qu{jackpot}. The order of your written numbers doesn't matter. If you have 5 of the 6 numbers correct (and 1 number incorrect), you win the lotto \qu{3rd prize}. If you have 3 numbers written down of the 6 numbered balls (and 3 numbers incorrect), you win the lotto \qu{5th prize}. The order of your written numbers doesn't matter.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{16} 
+\begin{enumerate}[(a)]
+\item There are 59! ways of arranging all the balls
+\item There are 6! / 59! possible lotto draws
+\item There are 59! / 6! possible lotto draws
+\item The probability of winning the jackpot is 1 in 59!
+\item The probability of winning the jackpot is $1 / \binom{59}{6}$
+\item The probability of winning a 3rd prize is $53 / \binom{59}{6}$
+\item The probability of winning a 3rd prize is $318 / \binom{59}{6}$
+\item The probability of winning a 3rd prize is $30 / \binom{59}{6}$
+\item The probability of winning a 3rd prize is $6 / \binom{59}{6}$
+\item The probability of winning a 3rd prize is $\binom{54}{1} / \binom{59}{6}$
+\item The probability of winning a 5th prize is 1/2
+\item The probability of winning a 5th prize is $\binom{6}{3}\binom{59}{3} / \binom{59}{6}$
+\item The probability of winning a 5th prize is $\binom{6}{3}\binom{53}{3} / \binom{59}{6}$
+\item The probability of winning a 5th prize is $\binom{6}{3} / \binom{59}{6}$
+\item The count of the numbers you write down which are in the lotto draw can be modeled as $\binomial{6}{1/ \binom{59}{6}}$
+\item The count of the numbers you write down which are in the lotto draw can be modeled as $\hypergeom{6}{6}{59}$
+\end{enumerate}
+\eenum\instr\pagebreak
+
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{5} Winning fifth prize in the lotto has a probability of $p := \binom{6}{3} \binom{53}{3} /  \binom{59}{6} \approx 1\%$. Consider the scenario where you buy one ticket every day and stop buying the day you first win.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{6} 
+\begin{enumerate}[(a)]
+\item The number of days that go by including the day you stop $T$ in the lotto can be modeled as $T \sim \binomial{n}{p}$ where $n \rightarrow \infty$
+\item The number of days that go by including the day you stop $T$ in the lotto can be modeled as $T \sim \geometric{p}$
+\item The number of days that go by including the day you stop $T$ in the lotto can be modeled as $T \sim \exponential{np}$ where $n \rightarrow \infty$ 
+\item The expected number of days that go by including the day you stop is approximately 100 
+\item The expected number of days that go by including the day you stop is approximately 99 
+\item The \emph{exact} expected number of days that go by including the day you stop cannot be determined given the information available to you
+\end{enumerate}
+\eenum\instr\pagebreak
+
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{12} \ingray{Winning fifth prize in the lotto has a probability of $p := \binom{6}{3} \binom{53}{3} /  \binom{59}{6} \approx 1\%$. Consider the scenario where you buy one ticket every day.} Assume $p=1\%$ exactly going forward. The number of days that go by up to and including the day that you \emph{first} win fifth prize $T$ in the lotto can be modeled as $T \sim \geometric{p}$. 
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{11} 
+\begin{enumerate}[(a)]
+\item The probability you win 5th prize on the first day is greater than the probability you win on the 5th prize on the second day
+\item The probability you win 5th prize on the first day is equal to the probability you win on the 5th prize on the second day
+
+\item The probability you stop on the first day is greater than the probability you stop on the second day
+\item The probability you stop on the first day is equal to the probability you stop on the second day
+
+\item The probability you stop on the first day is equal to the probability you win the 5th prize on the second day
+
+\item The probability you don't win any 5th prizes by day 10 is $1 - .99^{10}$
+
+\item If you know 10 days have passed without winning, the probability you don't win any 5th prizes by day 20 is $1 - .99^{20}$
+\item If you know 10 days have passed without winning, the probability you don't win any 5th prizes by day 20 is $1 - .99^{10}$ \\
+
+Each lotto ticket costs \$1 and each winning ticket pays out \$1. So if you lose, you lose \$1 and if you win you get back \$2. 
+
+\item The amount of money you have when you stop is equal to $-T$
+\item The amount of money you have when you stop is equal to $1-T$
+\item The amount of money you have when you stop is equal to $3-T$
+\end{enumerate}
+\eenum\instr\pagebreak
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{11} \ingray{Winning fifth prize in the lotto has a probability of $p := \binom{6}{3} \binom{53}{3} /  \binom{59}{6} \approx 1\%$. Consider the scenario where you buy one ticket every day.} Assume $p=1\%$ exactly going forward. Now consider we play for exactly 1,000 days. During this time period, we can win multiple times or never win at all.
+
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{17} 
+\begin{enumerate}[(a)]
+\item The number of 5th prizes you win can be modeled as $\binomial{1000}{0.01}$
+\item The number of 5th prizes you win can be modeled as $\hypergeom{1000}{0.01 N}{N}$ where $N$ is very large \\
+
+Each lotto ticket costs \$1 and each winning ticket pays out \$2. So if you lose, you lose \$1 and if you win you get \$2. Denote the payouts by $X_1, X_2, \ldots, X_{1000}$. Let $p_{X_i}(x)$ denote the PMF of $X_i$, $\mu_i$ denote its expectation and $\sigsq_i$ denote its variance. Let $\Xbar$ denote the average of all 1,000 payouts. Let $M_{X_i}(t)$ denote the MGF of $X_i$.
+
+\item $X_1, X_2, \ldots, X_{1000}$ are identically distributed
+\item $X_1, X_2, \ldots, X_{1000}$ are independent
+\item $\cov{X_1}{X_2} = 0$
+\item $\support{X_1} = \braces{-1, 2}$ 
+\item $\support{X_1} = \bracks{-1, 2}$ 
+\item $p_{X_1}(-1) = 0.99$ 
+\item $\mu_1 = -\$0.97$
+\item The 5th prize on the lottery is a fair game
+\item $\sigsq_1 > 0$
+\item $\sigsq_1 = \$0.0891$
+\item $\sigma_1 = \$0.0891$
+\item $\expe{\Xbar} = \mu_1$
+\item $\var{\Xbar} = \sigsq_1$
+\item For all realizations, $\displaystyle\frac{x_1 + x_2 + \ldots + x_{1000}}{1000} \approx \mu_1$
+\item $M_{X_1}(t) = .01e^{2t} + .99e^{-t}$
+\end{enumerate}
+\eenum\instr\pagebreak
+
+
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{10} \ingray{Winning fifth prize in the lotto has a probability of $p := \binom{6}{3} \binom{53}{3} /  \binom{59}{6} \approx 1\%$. Consider the scenario where you buy one ticket every day. Assume $p=1\%$ exactly going forward. Now consider we play for exactly 1,000 days. During this time period, we can win multiple times or never win at all.} Each lotto ticket costs \$1 and each winning ticket pays out \$2. So if you lose, you lose \$1 and if you win you get \$2. Denote the payouts by $X_1, X_2, \ldots, X_{1000}$. These rv's are iid distributed with support $\braces{-1, 2}$, mean $\mu = -\$0.97$ and $\sigsq = 0.0891\$^2$. Let $W = X_1 + X_2 + \ldots + X_{1000}$ denote your \emph{total} winnings over all $1000$ games. Let $Z \sim \stdnormnot$.
+
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{16} 
+\begin{enumerate}[(a)]
+\item $\expe{W} = -\$0.00097$
+\item $\expe{W} = -\$0.97$
+\item $\expe{W} = -\$970$
+\item $\var{W} = 0.0000891\$^2$
+\item $\var{W} = 0.0891\$^2$
+\item $\var{W} = 89.1\$^2$
+
+\item $\prob{Z > 0} = \half$
+\item $\prob{Z > 1} \approx 16\%$
+\item $\prob{Z > -970} \approx 1$
+\item $\prob{Z > 970} \approx 0$
+
+\item You have enough information to compute the exact probability of winning, $\prob{W > 0}$
+\item $\prob{W > 0} \approx \prob{Z > 0}$ 
+\item $\prob{W > 0} \approx \prob{Z > -970}$ 
+\item $\prob{W > 0} \approx \prob{Z > -102.7621}$ 
+\item $\prob{W > 0} \approx \prob{Z > 102.7621}$ 
+\item $\prob{W > 0} \approx 0$
+\end{enumerate}
+\eenum\instr\pagebreak
+
+
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{9} \ingray{Winning fifth prize in the lotto has a probability of $p := \binom{6}{3} \binom{53}{3} /  \binom{59}{6} \approx 1\%$. Consider the scenario where you buy one ticket every day. Assume $p=1\%$ exactly going forward. Now consider we play for exactly 1,000 days. During this time period, we can win multiple times or never win at all.} Let $\hat{P}$ denote the sampling distribution for $\hat{p}$, the proportion of 5th prize wins in the $n=1,000$ plays of the lotto.
+
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{13} 
+\begin{enumerate}[(a)]
+\item $\hat{P} \sim \binomial{1000}{0.01}$
+\item $\hat{P} \sim \normnot{10}{9.9}$
+\item $\hat{P} \sim \normnot{0.01}{0.0000099}$
+\item $\hat{P} \approxdist \normnot{10}{9.9}$
+\item $\hat{P} \approxdist \normnot{0.01}{0.0000099}$
+\item $\hat{P}$ is approximately normally distributed due to the Binomial Theorem
+\item $\hat{P}$ is approximately normally distributed due to the Central Limit Theorem
+\item $\hat{P}$ is approximately normally distributed due to the Law of Large Numbers
+\item $\hat{P}$ is degenerate-distributed if $n=1$
+\item $\hat{P}$ is uniform-distributed if $n=1$
+\item $\hat{P}$ is Bernoulli-distributed if $n=1$
+\item $\expenoexpand{\hat{P}} = p$
+\item $\expenoexpand{\hat{P}} \approx p$ but never exactly equal to $p$ for a finite value of $n$
+\end{enumerate}
+\eenum\instr\pagebreak
+
+
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{8} \ingray{Winning fifth prize in the lotto has a probability of $p := \binom{6}{3} \binom{53}{3} /  \binom{59}{6} \approx 1\%$. Consider the scenario where you buy one ticket every day. Assume $p=1\%$ exactly going forward. Now consider we play for exactly 1,000 days. During this time period, we can win multiple times or never win at all. Let $\hat{P}$ denote the sampling distribution for $\hat{p}$, the proportion of 5th prize wins in the $n=1,000$ plays of the lotto. Due to the central limit theorem, $\hat{P} \approxdist \normnot{0.01}{0.00314^2}$.} We are now concerned that the lotto's 5th prize isn't \qu{fair}. This means that we are trying to prove that it is paying out less than what is expected according to probability theory, $p$. Thus we wish to prove that $p < 1\%$.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{9} 
+\begin{enumerate}[(a)]
+
+\item This question is an example of statistical inference (which means we try to make inference for an unknown parameter using data)
+\item The best, most honest way to prove to others that $p < 1\%$ is to assume $p < 1\%$ is true and then it is believed until it is disproved by data
+\item The best, most honest way to prove to others that $p < 1\%$ is to assume $p \geq 1\%$ is true and then let the data disprove $p \geq 1\%$
+\item The theory $p < 1\%$ in (c) is called the \qu{alternative hypothesis}
+\item The theory $p < 1\%$ in (c) is called the \qu{null hypothesis}
+
+\item The interval $\bracks{0, 1\%}$ is called the set RET, the retainment region for $p$ for some level $\alpha$
+\item The interval $\bracks{1\%, 1}$ is called the set RET, the retainment region for $p$ for some level $\alpha$ $RET$
+\item The interval $\bracks{0, 1\%}$ is called the set $CI_{p, 1-\alpha}$, the confidence interval for $p$ for some level $\alpha$
+\item The interval $\bracks{1\%, 1}$ is called the set $CI_{p, 1-\alpha}$, the confidence interval for $p$ for some level $\alpha$
+\end{enumerate}
+\eenum\instr\pagebreak
+
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{8} \ingray{Winning fifth prize in the lotto has a probability of $p := \binom{6}{3} \binom{53}{3} /  \binom{59}{6} \approx 1\%$. Consider the scenario where you buy one ticket every day. Assume $p=1\%$ exactly going forward. Now consider we play for exactly 1,000 days. During this time period, we can win multiple times or never win at all. Let $\hat{P}$ denote the sampling distribution for $\hat{p}$, the proportion of 5th prize wins in the $n=1,000$ plays of the lotto. Due to the central limit theorem, $\hat{P} \approxdist \normnot{0.01}{0.00314^2}$. We are now concerned that the lotto's 5th prize isn't \qu{fair}. This means that we are trying to prove that it is paying out less than what is expected according to probability theory, $p$. Thus we wish to prove that $p < 1\%$.} Thus, $H_a: p < 1\%$ and $H_0: p \geq 1\%$. We set $\alpha = 2.5\%$.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{14} 
+\begin{enumerate}[(a)]
+\item $H_0$ is either retained or rejected
+\item If we reject $H_0$, the result is called \qu{statistically significant}.
+
+\item If we reject $H_0$ when $H_0$ was true, this is called a \qu{Type I error}
+\item If we reject $H_0$ when $H_0$ was false, this is called a \qu{Type I error}
+\item If we retain $H_0$ when $H_0$ was true, this is called a \qu{Type I error}
+\item If we retain $H_0$ when $H_0$ was false, this is called a \qu{Type I error}
+
+\item The probability of making a \qu{Type I error} in this test is 2.5\%
+\item The probability of making a \qu{Type I error} cannot be computed
+
+\item If $\alpha$ was smaller, the probability of a \qu{Type I error} would increase
+\item If $\alpha$ was smaller, the probability of a \qu{Type II error} would increase
+
+\item If the decision is to retain $H_0$, it is possible we made an error
+\item If the decision is to reject $H_0$, it is possible we made an error
+
+\item To make a decision about $H_0$, we first construct a set called RET, the retainment region at level $\alpha$.
+\item If $\hat{p}$ is an element of the set RET, we reject $H_0$
+\end{enumerate}
+\eenum\instr\pagebreak
+
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{12} \ingray{Winning fifth prize in the lotto has a probability of $p := \binom{6}{3} \binom{53}{3} /  \binom{59}{6} \approx 1\%$. Consider the scenario where you buy one ticket every day. Assume $p=1\%$ exactly going forward. Now consider we play for exactly 1,000 days. During this time period, we can win multiple times or never win at all. Let $\hat{P}$ denote the sampling distribution for $\hat{p}$, the proportion of 5th prize wins in the $n=1,000$ plays of the lotto. Due to the central limit theorem, $\hat{P} \approxdist \normnot{0.01}{0.00314^2}$. We are now concerned that the lotto's 5th prize isn't \qu{fair}. This means that we are trying to prove that it is paying out less than what is expected according to probability theory, $p$. Thus we wish to prove that $p < 1\%$. Thus, $H_a: p < 1\%$ and $H_0: p \geq 1\%$. We set $\alpha = 2.5\%$.} In the 1,000 days of tickets, we won only 5 times.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{16} 
+\begin{enumerate}[(a)]
+\item The sample data is the set of 1,000 wins or losses of the 1,000 days of lotto tickets
+\item The data were assumed to be sampled iid from a population of infinite size
+
+\item Using the CLT, RET = $\bracks{0, 0.0162}$ rounded to the nearest 3 significant digits
+\item Using the CLT, RET = $\bracks{0, 0.0145}$ rounded to the nearest 3 significant digits
+\item Using the CLT, RET = $\bracks{0.0162, 1}$ rounded to the nearest 3 significant digits
+\item Using the CLT, RET = $\bracks{0.0145, 1}$ rounded to the nearest 3 significant digits
+
+\item Using the CLT, RET = $\bracks{0, 0.00371}$ rounded to the nearest 3 significant digits
+\item Using the CLT, RET = $\bracks{0, 0.00554}$ rounded to the nearest 3 significant digits
+\item Using the CLT, RET = $\bracks{0.00371, 1}$ rounded to the nearest 3 significant digits
+\item Using the CLT, RET = $\bracks{0.00554, 1}$ rounded to the nearest 3 significant digits
+
+\item Using the CLT to compute RET, this test's decision using our data is to reject $H_0$
+\item Using the CLT to compute RET, this test's decision using our data is to retain $H_0$
+
+\item If (k) were to be true, a valid conclusion would be \qu{there is sufficient evidence to suggest that NY state is cheating the public out of a fair 5th prize in the lotto}
+\item If (l) were to be true, a valid conclusion would be \qu{there is not sufficient evidence to suggest that NY state is cheating the public out of a fair 5th prize in the lotto}
+
+\item Using the CLT, $CI_{p, 95\%} = \bracks{0.000539, 0.00946}$
+\item Using the CLT, $CI_{p, 95\%} = \bracks{0.000554, 0.0145}$
+\end{enumerate}
+\eenum\instr\pagebreak
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{11} The time you spend waiting for a bus (measured in minutes) is modeled as $T \sim \exponential{0.2}$, an exponential rv with mean $\mu$ and variance $\sigsq$.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{13} 
+\begin{enumerate}[(a)]
+\item The PDF of the rv $T$, the bus waiting time is $f(t) = 0.2 e^{-0.2 t}$
+\item The PDF of the rv $T$, the bus waiting time is $f(t) = e^{-0.2 t}$
+\item $\lim_{t \rightarrow \infty} f(t) = 0$
+\item $\lim_{t \rightarrow -\infty} f(t) = 0$
+\item $\lim_{t \rightarrow \infty} f(t) = 1$
+\item $\lim_{t \rightarrow -\infty} f(t) = 1$
+\item The expected waiting time is $\mu$ = 5min
+\item There is a 50\% chance you will be waiting for less than 5min
+\item You are $e$ times more likely to be waiting 2min than 7min
+\item If you were waiting for 5 minutes already, the total expected waiting time is 7.5min
+\item The value of $\sigsq$ can be calculated given the information provided to you
+\item $\support{T} = \bracks{0, \mu}$
+\item $\support{T} = \reals$
+\end{enumerate}
+\eenum\instr\pagebreak
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{12} Let $X \sim U(0, m)$ where $m > 0$. Let $\mu$ denote the expectation of $X$, $\sigsq$ denote the variance of $X$ and $M_X(t) = (e^{mt} - 1) / (mt)$ denote the MGF of $X$.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{14} 
+\begin{enumerate}[(a)]
+\item $\support{X} = \bracks{0,m}$
+
+\item Let $h(t) := \displaystyle\frac{d}{dt}\bracks{M_X(t)}$. Then $h(0) = m/2$
+\item Let $h(t) := \displaystyle\frac{d^2}{dt^2}\bracks{M_X(0)}$. Then $h(0)  = m/2$
+\item Let $h(t) := \displaystyle\frac{d}{dt}\bracks{M_X(0)}$. Then $h(0)  = m^2/12$
+\item Let $h(t) := \displaystyle\frac{d^2}{dt^2}\bracks{M_X(0)}$. Then $h(0)  = m^2/12$
+
+\item $\expe{X^2} = m^2/12$
+\item $\expe{X^2} = m^2/4$
+\item $\expe{X^2} = m^2/3$ \\
+
+Let $Y = aX + c$
+\item $M_Y(t) = e^{ct}(e^{mt} - 1) / (mt)$
+\item $M_Y(t) = e^{ct}(e^{mat} - 1) / (mat)$
+\item $M_Y(t) = a(e^{mt} - 1) / (mt) + c$ \\
+
+Let $\Xoneton \iid U(0, m)$ and let $T = X_1 + \ldots + X_n$
+\item $M_T(t) =  (e^{mt} - 1)^n / (mt)^n$
+\item $M_T(t) =  n(e^{mt} - 1) / (mt)$
+\item $M_T(t) =  (e^{mt} - 1) / (mt)$
+
+\end{enumerate}
+\eenum\instr\pagebreak
+
+
+
+
+\end{document}
+
+
+
+
+
+%%% EXPONMENTIAL
+
+%%% MGF
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%
+\vspace{-0.4cm}
+\begin{wrapfigure}{R}{2in}
+\includegraphics[width=1.5in]{spinner.png}
+\end{wrapfigure} \problem\timedsection{12}  Consider a game where someone spins the spinner pictured on the right. The numbers represent payouts in \$. The spinner has four colors: red, blue, green, yellow with payouts 2,4, or 8; 5 or 7; 3 or 6; 1 respectively. Let $X$ be the rv whose realization values are the payouts. Assume the spinner is fair.
+
+\benum\truefalsesubquestionwithpoints{18} 
+\begin{enumerate}[(a)]
+
+\vspace{-0.2cm}
+\item $X$ is a discrete rv
+\item $X$ is a uniform discrete rv
+\item $X$ could be a binomial rv where $n = 8$
+\item $X$ could be a hypergeometric rv where $N = 8$
+\item $\support{X} = \braces{1, 2,..., 8}$
+\item $\support{X} = \bracks{1, 8}$
+%\item $|\support{X}| = 8$
+\item $|\support{X}| = |\naturals|$
+\item If we let $\Omega$ = \{Red, blue, green, yellow\} then we can construct a rv $X$ that maps $\omega \in \Omega$ to the support values of $X$.
+\item If we let $\Omega = \bracks{0, 2\pi}$ where $\omega$ represents the angle of the spinner from the right horizontal level between states 2 and 3, then we can construct a rv $X$ that maps $\omega \in \Omega$ to the support values of $X$.
+\item $\expe{X} = 4$
+\item $\expe{X} = 4.5$
+\item $\expe{X} = 5$
+\item Med$\bracks{X}$ = 4
+\item Med$\bracks{X}$ = 4.5
+\item Med$\bracks{X}$ = 5
+\item Q$\bracks{X, 0.1}$ = 1
+\item Q$\bracks{X, 0.1}$ = 2
+\item Range$\bracks{X}$ = 8
+\end{enumerate}
+\eenum\instr\pagebreak
+
+%%%%%%%%%%%%%%%%%%
+\begin{wrapfigure}{R}{2in}
+\includegraphics[width=1.5in]{spinner.png}
+\end{wrapfigure} \problem\timedsection{8} \ingray{Consider a game where someone spins the spinner pictured on the right. The numbers represent payouts in dollars. The spinner has four colors: red, blue, green, yellow. Red payouts are 2,4, or 8; blue payouts are 5 or 7; green payouts are 3 or 6; yellow only pays out 1. Let $X$ be the rv whose realization values are the payouts. Assume the spinner is fair.} In this rv, $\mu = 4.5$ and $\support{X} = \braces{1, 2,..., 8}$.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{14} 
+\begin{enumerate}[(a)]
+\item $p(x)$ is monotonically increasing
+\item $F(x)$ is monotonically increasing
+\item $p(x) < 1$ for all $x \in \support{X}$
+\item $F(x) < 1$ for all $x \in \support{X}$
+\item $F(4) = 0$
+\item $F(4) = 0.5$
+\item $F(4) = 1$
+\item $p(4) = 0.5$
+\item $\sigsq := \var{X} = (1/8) (1^2 + 2^2 + 3^2 + \ldots + 8^2)$
+\item $\sigsq := \var{X} = (1/4)(0.5^2 + 1.5^2 + 2.5^2 + 3.5^2)$
+\item $\expe{X^2} = 4.5^2$
+\item $\sigma := \sd{X} = \expe{X} - 4.5$
+\item The unit of the value of the variance of $X$ is dollars
+\item The unit of the value of the standard deviation of $X$ is dollars
+\end{enumerate}
+\eenum\instr\pagebreak
+
+%%%%%%%%%%%%%%%%%%
+\begin{wrapfigure}{R}{2in}
+\includegraphics[width=1.3in]{spinner.png}
+\end{wrapfigure} \problem\timedsection{10} \ingray{Consider a game where someone spins the spinner pictured on the right. The numbers represent payouts in dollars. The spinner has four colors: red, blue, green, yellow. Red payouts are 2,4, or 8; blue payouts are 5 or 7; green payouts are 3 or 6; yellow only pays out 1. Let $X$ be the rv whose realization values are the payouts. Assume the spinner is fair. In this rv, $\mu = 4.5$ and $\support{X} = \braces{1, 2,..., 8}$.} The variance is $\sigsq := \var{X} = 5.25$ and $\sigma := \sd{X} = 2.29$ rounded to the nearest two digits.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{13} 
+\begin{enumerate}[(a)]
+\item Another way to define variance (i.e. mean \qu{distance} from the mean) could be $\expe{\abss{X - \mu}}$
+\item Another way to define variance (i.e. mean \qu{distance} from the mean) could be $\expe{X - \mu}$
+\item Another way to define variance (i.e. mean \qu{distance} from the mean) could be $\expe{(X - \mu)^{100}}$
+\item $\expe{X^2} = 5.25 + 4.25^2 = 23.3125$
+\item $\expe{X^2} = 5.25 - 4.25^2 = -12.8125$
+\item $\expe{X^2} = 5.25^2 - 4.25^2 = 9.5$\\
+
+For the rest of these questions let $Y$ denote the rv for the following game. You play the game $X$ but you have to pay a 20\% of the winnings to the casino, then after the tax is taken, you have to pay \$4 to the casino.
+
+\item $X \equalsindist Y$
+\item $X, Y$ are independent rv's
+\item $Y$ is a \qu{fair game} for you (the player)
+\item $\var{Y} = 0.8\sigsq$
+\item $\sd{Y} = 0.8\sigma$
+\item The probability of winning money if you play the game $Y$ is 3/8
+\item $\var{X + Y}$ would have a non-zero covariance term in its expression
+\end{enumerate}
+\eenum\instr\pagebreak
+
+%%%%%%%%%%%%%%%%%%
+\begin{wrapfigure}{R}{2in}
+\includegraphics[width=1.5in]{spinner.png}
+\end{wrapfigure} \problem\timedsection{9} \ingray{Consider a game where someone spins the spinner pictured on the right. The numbers represent payouts in dollars. The spinner has four colors: red, blue, green, yellow. Red payouts are 2,4, or 8; blue payouts are 5 or 7; green payouts are 3 or 6; yellow only pays out 1. Let $X$ be the rv whose realization values are the payouts. Assume the spinner is fair. In this rv, $\mu = 4.5$ and $\support{X} = \braces{1, 2,..., 8}$. The variance is $\sigsq := \var{X} = 5.25$ and $\sigma := \sd{X} = 2.29$ rounded to the nearest two digits.} Also consider playing this game $n = 1000$ times where the spinner is reset to the same position and you flick it with approximately the same force each time. The payouts for these $n$ games are denoted by rv's $\Xoneton$.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{11} 
+\begin{enumerate}[(a)]
+\item $\Xoneton \iid$
+\item $\Xoneton \inddist$
+
+\item The total winnings after all $n$ games is expected to be $4500$
+\item The variance in the total winnings after all $n$ games is 5250
+\item The standard deviation in the total winnings after all $n$ games is 72.46 rounded to the nearest two digits.
+\item The standard deviation in the total winnings after all $n$ games is 2290
+
+\item The average winnings per game after all $n$ games is expected to be $4.5$
+\item The variance in the average winnings per game after all $n$ games is 0.00525
+\item The standard deviation in the average winnings per game after all $n$ games is 0.00229 rounded to the nearest 3 digits.
+\item The standard deviation in the average winnings per game after all $n$ games is 0.0724 rounded to the nearest 3 digits.
+\item As $n$ gets larger, the average winnings per game after all $n$ games approaches a rv centered at $4.5$ with variance shrinking to zero.
+\end{enumerate}
+\eenum\instr\pagebreak
+
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{9} In the previous game, the probability of winning is $p := 3/8$ and you played $n = 1000$ times. Each game was $\iid$. Let $\Xoneton$ now denote whether each game was won or not (1 = win and 0 = lose). These are different rv's than the previous problem! Let $T$ denote the total number of wins out over the $n$ games.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{17} 
+\begin{enumerate}[(a)]
+\item $\Xoneton \iid$
+\item $X_{17} \sim \bernoulli{3/8}$
+\item $X_{17} \sim \bernoulli{5/8}$
+\item $T \sim \binomial{n}{p}$
+\item $T \sim \hypergeom{n}{np}{n}$ 
+\item $T$ is independent of $X_{17}$
+\item $\prob{T = 17} = 3/8$
+\item $\prob{T = 17} = \binom{1000}{17} (3/8)^{17} (5/8)^{983}$
+\item $\prob{X_{17} = 17} = 3/8$
+\item $\prob{X_{17} = 17} = (3/8)^{17}$
+\item $\prob{X_{17} = 17} = \binom{1000}{17} (3/8)^{17} (5/8)^{983}$
+\item $\expe{T} = (3/8)^{17}$
+\item $\expe{T} = 1000 \times 3/8$
+\item $\var{T} = 1000 \times 3/8 \times 5/8$
+\item $\var{T} = \sum_{t=1}^{1000} \binom{1000}{t} (3/8)^{t} (5/8)^{1000 - t}$
+\item $\var{T} = \sum_{t=1}^{1000} t \binom{1000}{t} (3/8)^{t} (5/8)^{1000 - t}$
+\item If you kept playing this game until you won (i.e. no limit on $n$, the number of games), then the number of games total played would be a memoryless rv.
+\end{enumerate}
+\eenum\instr\pagebreak
+
+
+%%%%%%%%%%%%%%%%%%
+\problem\timedsection{10} Consider a cup with $N = 8$ coins inside and $K = 3$ coins are marked with a permanent marker. Let $p := 3/8$ denote the proportion of marked coins of the total number of coins. You shake the cup and then reach in and pull out $n = 6$ coins so 6 are in your hand and 2 are left in the cup. Let $X_1, X_2, \ldots, X_6$ denote the rv that models if each of the 6 coins in your hand are marked or unmarked ($X_i = 1$ if marked and $X_i = 0$ if unmarked). Let $T$ denote the number of coins in your hand that are marked with the permanent marker. Thus, $T$ is the sum of $X_1, X_2, \ldots, X_6$.
+
+\vspace{-0.2cm}\benum\truefalsesubquestionwithpoints{16} 
+\begin{enumerate}[(a)]
+\item $X_1, X_2, \ldots, X_6 \iid$
+\item $X_{3} \equalsindist X_6$
+\item $X_{3} \sim \bernoulli{p}$
+\item $X_{3} \sim \bernoulli{K/N}$
+\item $T \sim \binomial{n}{p}$
+\item $T \sim \binomial{N}{p}$
+\item $T \sim \hypergeom{n}{K}{N}$ 
+\item $T \sim \hypergeom{n}{np}{N}$ 
+\item $T$ is independent of $X_{3}$
+\item $\support{T} = \braces{1, 2, 3, 4, 5, 6, 7, 8}$
+\item $\support{T} = \braces{1, 2, 3, 4, 5, 6}$
+\item $\support{T} = \braces{1, 2, 3}$
+\item $\prob{T = t} = \displaystyle \frac{\binom{3}{t}\binom{5}{6 - t}}{\binom{8}{6}}$
+\item $\expe{T} = np$
+\item $\expe{T} = n\frac{K}{N}$
+\item Given a calculator and enough time, $\var{T}$ can be computed given the information on this page
+\end{enumerate}
+\eenum\instr\pagebreak
+
+\end{document}
+
+
